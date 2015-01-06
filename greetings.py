@@ -30,24 +30,24 @@ def get_last() :
 
 def valid() :
 	# Check if first name has been provided!
-	if first_name == '':
-		print 'As Gandalf would say you shall not pass without a first name'
+	if not first_name:
+		print('As Gandalf would say you shall not pass without a first name')
 		get_first()
 		# if provided loop back round
 		valid()
 		return
 	# Check if last name has been provided!
-	if last_name == '' :
-		print 'As Gandalf would say you shall not pass without a last name'
+	if not last_name:
+		print('As Gandalf would say you shall not pass without a last name')
 		get_last()
 		# if provided loop back round
 		valid()
 		return
 
 		# if everything has been provided then finish!
-	if first_name != '' and last_name != '' :
+	if first_name and last_name :
 		# send back the answer and make sure capatilise the name
-		print 'I am pleased to meet you,', first_name.title(), last_name.title()
+		print('I am pleased to meet you,', first_name.title(), last_name.title())
 
 
 # run our main function
