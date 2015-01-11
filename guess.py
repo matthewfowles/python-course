@@ -22,28 +22,27 @@ count = 5;
 # create main function
 def main() :
 
-	print 'Try to guess the number between 0 and 20. You have five lives'
+	print('Try to guess the number between 0 and 20. You have five lives')
 	global count
 
 
 	while True:
 
 		if count == 0 : 
-			print 'You have lost all your lives!'
-			print 'The number was:', number
+			print('You have lost all your lives!')
+			print('The number was:', number)
 			break
 
-		guess = int(raw_input("Please enter a guess: "))
+		guess = int(input("Please enter a guess: "))
 
 		count -= 1
 
 		if guess != number :
-			print 'Sorry you did not guess correct!'
-			print count, 'Lives left!'
+			print('Sorry you did not guess correct!')
+			print(count, 'Lives left!')
 			continue
-
-		if guess == number :
-			print 'Congratulations you win!'
+		else :
+			print('Congratulations you win!')
 			break
 
 
