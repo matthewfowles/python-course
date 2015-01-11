@@ -23,12 +23,12 @@ def main() :
 def get_first() : 
 	# get raw input for first name and bind to global variable
 	global first_name
-	first_name = raw_input('Hey whats your first name: ')
+	first_name = input('Hey whats your first name: ')
 
 def get_last() :
 	# get raw input for last name and bind to global variable
 	global last_name
-	last_name = raw_input('Hey whats your last name: ')
+	last_name = input('Hey whats your last name: ')
 
 def valid() :
 	# Check if first name has been provided!
