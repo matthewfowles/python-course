@@ -12,8 +12,8 @@ string = ''
 # create our main function
 def main() :
 	global string
-	print 'Please enter a string all in uppercase that ends in a period'
-	string = raw_input('String: ')
+	print('Please enter a string all in uppercase that ends in a period')
+	string = input('String: ')
 
 	validate();
 
@@ -22,19 +22,19 @@ def validate() :
 
 	# Check they entered something
 	if string == '' :
-		print 'You need to enter something!'
+		print('You need to enter something!')
 		main()
 		return
 
 	# Check they made the string uppercase
 	if string.isupper() != True :
-		print 'This is not uppercase!'
+		print('This is not uppercase!')
 		main()
 		return
 
 	# Check it has a period at the end......
 	if string.endswith('.') != True :
-		print 'This does not end with a period!'
+		print('This does not end with a period!')
 		main()
 		return
 
@@ -44,7 +44,7 @@ def success() :
 
 	# Print successs message
 
-	print 'Woohoo strong with the string you are!'
+	print('Woohoo strong with the string you are!')
 
 main()
 
