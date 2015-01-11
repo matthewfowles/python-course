@@ -4,7 +4,7 @@
 
 
 # Get users text
-text = raw_input('Please enter some text: ');
+text = input('Please enter some text: ');
 
 # strip whitespace and split words up
 words = text.strip().split()
@@ -16,15 +16,14 @@ lower = []
 
 # loop through and assign to a list
 for word in words :
-	if word.isupper() :
+	if any(i.isupper() for i in word) :
 		upper.append(word)
 	else :
 		lower.append(word)
 
-# Loop through bost list in one for statement. Log uppercase words first and lowercase words last!
-for item in range(0, len(upper) + len(lower)) : 
-	if item <= len(upper) :
-		print upper.pop()
-	else :
-		print lower.pop()
 
+for item in upper:
+	print(item)
+
+for item in lower:
+	print(item)
