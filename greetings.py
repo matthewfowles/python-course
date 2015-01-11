@@ -6,6 +6,8 @@ This program takes raw string input's for first and last name. It will then prin
 If you fail to provide one of your names it will ask you for them again.
 """
 
+from __future__ import print_function  
+
 # declare our two variables
 
 first_name = '' 
@@ -47,7 +49,7 @@ def valid() :
 		# if everything has been provided then finish!
 	if first_name and last_name :
 		# send back the answer and make sure capatilise the name
-		print('I am pleased to meet you,', first_name.title(), last_name.title())
+		print("I am pleased to meet you,", first_name.title(), last_name.title())
 
 
 # run our main function
