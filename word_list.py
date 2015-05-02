@@ -21,9 +21,8 @@ for word in words :
 	else :
 		lower.append(word)
 
+all_words = upper + lower
 
-for item in upper:
-	print(item)
+for word in all_words:
+	print(word) 
 
-for item in lower:
-	print(item)

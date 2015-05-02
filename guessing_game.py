@@ -13,23 +13,23 @@ number = randint(1,99)
 # create main function
 def main() :
 
-	print 'Try to guess the number between 0 and 99.'
+	print('Try to guess the number between 0 and 99.')
 
 
 	while True:
 
 
-		guess = int(raw_input("Please enter a guess: "))
+		guess = int(input("Please enter a guess: "))
 
 
 		if guess > number :
-			print 'Too high! Try again.'
+			print('Too high! Try again.')
 			continue
 		elif guess < number :
-			print 'Too low! Try again.'
+			print('Too low! Try again.')
 			continue
 		elif guess == number :
-			print 'Congratulations you got it!'
+			print('Congratulations you got it!')
 			break
 
 main()

@@ -24,21 +24,24 @@ def validate() :
 	if string == '' :
 		print('You need to enter something!')
 		main()
-		return
+
+	# Check whether the string has both not uppercase and has no period at the end.
+	elif not string.isupper() and not string.endswith('.'):
+		print('This is not uppercase and does not end with a period!')
+		main()
 
 	# Check they made the string uppercase
-	if string.isupper() != True :
+	elif not string.isupper():
 		print('This is not uppercase!')
 		main()
-		return
 
 	# Check it has a period at the end......
-	if string.endswith('.') != True :
+	elif not string.endswith('.'):
 		print('This does not end with a period!')
 		main()
-		return
 
-	success()
+	else: 
+		success()
 
 def success() :
 

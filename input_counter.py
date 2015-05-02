@@ -3,47 +3,33 @@
 #
 
 
-from sets import Set
-
-all_words = set([])
+all_words = set()
 words_map = {}
 
-text = ''
-
-count = 0
-
-
-def main() :
-	global text
-	text = raw_input("Please enter some text: ")
-
-	if text  == '' :
-		return
-	else :
-		sort()
-
-def sort() : 
-
+def sort(text) : 
 	words = text.strip().split()
-
 	for word in words :
+		current = len(all_words)
+		all_words.add(word)
+		new = len(all_words)
 
-		if word not in all_words :
-			global count
-			all_words.add(word)
-			words_map[word] = count
-			count += 1;
-
+		if new > current :
+			words_map[word] = len(all_words)
+			
 	results()
-	main()
 
 
 
 def results() :
+	for key, value in sorted(words_map.items()): 
+		print(key, value)
 
 
-	for item in all_words : 
-		print item, words_map[item]
+while True:
+	text = input("Please enter some text: ")
 
-
-main()
+	if text:
+		sort(text)
+	else :
+		print('finished')
+		break

@@ -14,8 +14,8 @@ for sentence in sentences :
 	global sentence_count
 	sentence_count += 1
 
-	print '*' * 20
-	print 'sentence:', sentence_count
+	print ('*' * 20)
+	print ('sentence:', sentence_count)
 
 	phrases = sentence.split(',')
 
@@ -24,4 +24,4 @@ for sentence in sentences :
 		
 		phrase_count += 1
 
-		print 'phrase', "{0:2}".format(phrase_count), ':', phrase
+		print ('phrase', "{0:2}".format(phrase_count), ': ', phrase.strip())

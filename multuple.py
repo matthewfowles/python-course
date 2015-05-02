@@ -3,8 +3,8 @@
 #
 
 
-tuples = ((1, 1), (2, 2), (12, 13), (4, 4), (99, 98))
+tpls = ((1, 1), (2, 2), (12, 13), (4, 4), (99, 98))
 
-for tuple in tuples :
-	total = tuple[0] * tuple[1]
-	print "{0:5}".format(total), '=', tuple[0], 'x', tuple[1]
+for tpl in tpls :
+	fmt = '{0:>4} = {1:>2} x {2:>2}'
+	print(fmt.format(tpl[0] * tpl[1], tpl[0], tpl[1]))
